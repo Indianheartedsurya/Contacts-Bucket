@@ -1,0 +1,501 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+}
+
+.left,
+.right {
+  overflow: auto;
+}
+
+body {
+  background-color: #000000;
+  width: 100vw;
+}
+
+/* for flex super divs*/
+/*for tablets,mobile*/
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.linkContainer {
+  /* border: 3px solid red; */
+  width: 33rem;
+}
+
+.container {
+  width: 70rem;
+  /* border: 2px solid red; */
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.categories {
+  /* text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080; */
+  text-shadow: 0 0 10px #fff, 0 0 20px #00d5ff, 0 0 30px #00d5ff,
+    0 0 40px #00d5ff, 0 0 55px #00d5ff, 0 0 75px #00d5ff;
+  color: #fff;
+  width: 31.2rem;
+  margin: 1em;
+  /* padding: 1em; */
+  text-align: center;
+  /* border: 2px solid green; */
+  font-size: larger;
+  font-weight: bold;
+}
+
+
+
+/*for all animation*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@media (print), (prefers-reduced-motion) {
+  .animated {
+    -webkit-animation: unset !important;
+    animation: unset !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+
+/*fade in animation*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/*css for main card*/
+.linkContainer {
+  margin-top: 3em;
+  /* border: 2px solid red; */
+  box-sizing: border-box;
+  max-height: 28rem;
+  justify-content: flex-start;
+}
+
+/*card normal look*/
+.linkContainer a {
+  width: 29rem;
+  margin: 1em;
+  padding: 1em;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fff;
+  background: none;
+  color: #ffffff;
+  text-align: center;
+  -webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff,
+    inset 0 0 15px #fff, 0 0 1px #ffffff, 0 0 3px #ffffff, 0 0 5px #fff,
+    0 0 10px #fff, 0 0 20px #fff;
+  -moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #fff,
+    0 0 1px #ffffff, 0 0 3px #ffffff, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
+  box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #fff,
+    0 0 1px #ffffff, 0 0 3px #ffffff, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
+}
+
+.linkContainer a:hover {
+  opacity: 1;
+  -moz-box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+    0 0 55px #fff, 0 0 75px #fff;
+  -webkit-box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+    0 0 55px #fff, 0 0 75px #fff;
+  box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, 0 0 20px #fff,
+    0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+}
+.linkContainer a div {
+  position: relative;
+}
+.linkContainer a div img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  position: absolute;
+  left: -35px;
+  top: -30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fff;
+  background: none;
+  color: #ffffff;
+  text-align: center;
+  -webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff,
+    inset 0 0 15px #fff, 0 0 1px #ffffff, 0 0 3px #ffffff, 0 0 5px #fff,
+    0 0 10px #fff, 0 0 20px #fff;
+  -moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #fff,
+    0 0 1px #ffffff, 0 0 3px #ffffff, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
+  box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #fff,
+    0 0 1px #ffffff, 0 0 3px #ffffff, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
+}
+
+/*central div*/
+#welcome {
+  display: flex;
+  justify-content: center;
+  margin: 2.5em 0 1.5em 0;
+}
+
+#welcome > span {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  text-align: center;
+  font-family: "Monoton", cursive;
+  font-size: 2.75em;
+  color: #fff;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 2px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff,
+    inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080,
+    inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080,
+    0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  -moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff,
+    inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080,
+    inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080,
+    0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080,
+    inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080,
+    0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  animation: flicker 1.5s infinite alternate;
+}
+
+/*flicker animation on the welcome border*/
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    -webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff,
+      inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080,
+      inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080,
+      0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    -moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff,
+      inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080,
+      inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080,
+      0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080,
+      inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080,
+      0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+      0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  }
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
+}
+
+@-webkit-keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    -webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff,
+      inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080,
+      inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080,
+      0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    -moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff,
+      inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080,
+      inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080,
+      0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  }
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
+}
+
+@-moz-keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    -webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff,
+      inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080,
+      inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080,
+      0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    -moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff,
+      inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080,
+      inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080,
+      0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  }
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
+}
+
+/*for the base of the page*/
+#footer {
+  margin-top: 4em;
+  padding-bottom: 2em;
+  text-align: center;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  color: #fff;
+}
+
+#footer > a:link {
+  text-decoration: none;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  color: #fff;
+}
+
+#footer > a:active {
+  text-decoration: none;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  color: #fff;
+}
+
+#footer > a:visited {
+  text-decoration: none;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  color: #fff;
+}
+
+/*contact div css*/
+#Message {
+  font-size: large;
+  text-shadow: 0 0 10px #fff, 0 0 20px #00d5ff, 0 0 30px #00d5ff,
+    0 0 40px #00d5ff, 0 0 55px #00d5ff, 0 0 75px #00d5ff;
+  color: #fff;
+  text-align: center;
+  opacity: 0.7;
+  margin: 5em 2em 1em 2em;
+  padding: 3em 0 3em 0;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 2px;
+  border-radius: 25px;
+  -webkit-box-shadow: inset 0 0 5px #fff000, inset 0 0 10px #fff000,
+    inset 0 0 20px #ff0000, inset 0 0 30px #ff0000, inset 0 0 40px #ff0000,
+    inset 0 0 55px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000,
+    0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+  -moz-box-shadow: inset 0 0 5px #fff000, inset 0 0 10px #fff000,
+    inset 0 0 20px #ff0000, inset 0 0 30px #ff0000, inset 0 0 40px #ff0000,
+    inset 0 0 55px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000,
+    0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+  box-shadow: inset 0 0 5px #fff000, inset 0 0 10px #fff000,
+    inset 0 0 20px #ff0000, inset 0 0 30px #ff0000, inset 0 0 40px #ff0000,
+    inset 0 0 55px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000,
+    0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+}
+
+#Message a button {
+  cursor: pointer;
+  /* background-color: yellow; */
+
+  color: #fff;
+  border-radius: 6px;
+  padding: 3px;
+
+  -webkit-box-shadow: inset 0 0 5px #24f8ea, inset 0 0 10px #24f8ea,
+    inset 0 0 20px #ff0000, inset 0 0 30px #ff0000, inset 0 0 40px #ff0000,
+    inset 0 0 55px #ff0000, 0 0 5px #24f8ea, 0 0 10px #24f8ea, 0 0 20px #ff0000,
+    0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+  -moz-box-shadow: inset 0 0 5px #24f8ea, inset 0 0 10px #24f8ea,
+    inset 0 0 20px #ff0000, inset 0 0 30px #ff0000, inset 0 0 40px #ff0000,
+    inset 0 0 55px #ff0000, 0 0 5px #24f8ea, 0 0 10px #24f8ea, 0 0 20px #ff0000,
+    0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+  box-shadow: inset 0 0 5px #24f8ea, inset 0 0 10px #24f8ea,
+    inset 0 0 20px #ff0000, inset 0 0 30px #ff0000, inset 0 0 40px #ff0000,
+    inset 0 0 55px #ff0000, 0 0 5px #24f8ea, 0 0 10px #24f8ea, 0 0 20px #ff0000,
+    0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+}
+
+
+/* Responsiviness--------------------------------------------- */
+
+/* for laptops,desktops*/
+@media screen and (max-width: 1024px) {
+	.container {
+	  flex-direction: row;
+	  width: 100vw;
+	}
+	.linkContainer a {
+	  width: 20rem;
+	  margin: auto;
+	  margin: 1em;
+  
+	  justify-content: space-evenly;
+	}
+	.linkContainer a {
+	  width: 20rem;
+	  /* background-color: red; */
+	  margin: auto;
+	  margin: 1em;
+	  font-size: 0.81em;
+	}
+	.linkContainer a div img {
+	  width: 4.0rem;
+	  height: 4.0rem;
+	}
+	.flex-container {
+	  width: 23rem;
+	  margin: 2rem auto;
+	  /* border: 2px solid red; */
+	}
+  
+	.categories {
+	  width: 25rem;
+	  /* border:2px solid rgb(60, 255, 0); */
+	}
+  
+	#welcome > span {
+	  font-size: 4em;
+	} 
+  }
+  
+
+/* /*for tablet max 768px */
+@media screen and (max-width: 768px) {
+	.container {
+	  flex-direction: column;
+	  width: 100vw;
+	}
+	.linkContainer a {
+	  width: 24rem;
+	  /* background-color: red; */
+	  margin: auto;
+	  margin: 1em;
+	}
+	.linkContainer a div img {
+	  width: 4.8rem;
+	  height: 4.8rem;
+	}
+	.flex-container {
+	  width: 28rem;
+	  margin: 2rem auto;
+	  /* border: 2px solid red; */
+	}
+  
+	.categories {
+	  width: 25rem;
+	  /* border:2px solid rgb(60, 255, 0); */
+	}
+  }
+  
+
+/* for mobile L max 425px */
+@media screen and (max-width: 425px) {
+	#welcome {
+	  width: 20rem;
+	  /* border: 10px solid red; */
+	  margin-left: 4rem;
+	}
+	#Message {
+	  width: 23rem;
+	  height: 1.5rem;
+	  padding: 2rem 0;
+	}
+	#footer {
+	  width: 27rem;
+	  display: flex;
+	  justify-content: center;
+	  /* border: 2px solid red; */
+	}
+  }
+  
+  
+/* for mobile M max 275px */
+@media screen and (max-width: 375px) {
+	#welcome {
+	  width: 20rem;
+	  /* border: 10px solid red; */
+	  margin-left: 4rem;
+	}
+	#Message {
+	  width: 23rem;
+	  height: 1.5rem;
+	  padding: 2rem 0;
+	}
+	#footer {
+	  width: 27rem;
+	  display: flex;
+	  justify-content: center;
+	  /* border: 2px solid red; */
+	}
+  }	
+
+/* for Mobile S max 320px */
+@media screen and (max-width: 320px) {
+  #welcome {
+    width: 20rem;
+    /* border: 10px solid red; */
+    margin-left: 3rem;
+  }
+  #Message {
+    width: 23rem;
+    height: 1.5rem;
+    padding: 2rem 0;
+  }
+  #footer {
+    width: 27rem;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
+}
